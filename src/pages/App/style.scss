@@ -1,0 +1,54 @@
+$btn-Color: #ffdada;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  .App {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #dbf6e9, #9ddfd3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrapper {
+      .input {
+        min-width: 15rem;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        border-radius: 8px;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+      }
+      .link {
+        display: block;
+        width: 15rem;
+
+        .button {
+          cursor: pointer;
+          width: 100%;
+          padding: 0.5rem 1rem;
+          background-color: $btn-Color;
+          border: 0;
+          color: #313131;
+          border-radius: 8px;
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+          padding: 0.25em 0.75em;
+          min-width: 10ch;
+          min-height: 44px;
+          text-align: center;
+          line-height: 1.1;
+          transition: 220ms all ease-in-out;
+
+          &:hover,
+          &:active {
+            background-color: scale-color($btn-Color, $lightness: -20%);
+          }
+          &:focus {
+            outline-style: solid;
+            outline-color: transparent;
+            box-shadow: 0 0 0 4px scale-color($btn-Color, $lightness: -40%);
+          }
+        }
+      }
+    }
+  }
+}
